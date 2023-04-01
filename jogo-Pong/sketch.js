@@ -52,10 +52,10 @@ function draw() {
   checkColissionBoard();
   showRacket(xRacket, yRacket);
   moveMyRacket();
-  checkColisssionRacket(xRacket, yRacket);
+  checkColissionRacket(xRacket, yRacket);
   showRacket(xRacketOpponent, yRacketOpponent);
   moveOpponentRacket();
-  checkColisssionRacket(xRacketOpponent, yRacketOpponent);
+  checkColissionRacket(xRacketOpponent, yRacketOpponent);
   includeScoreboard();
   marcapoint();
 }
@@ -70,10 +70,10 @@ function movingpellet() {
 }
 
 function checkColissionBoard() {
-  if (xpellet + ratio > width || xpellet - ratio < 0) {
+  if (xpellet + radius > width || xpellet - radius < 0) {
     velocityXpellet *= -1;
   }
-  if (ypellet + ratio > height || ypellet - ratio < 0) {
+  if (ypellet + radius > height || ypellet - radius < 0) {
     velocityYpellet *= -1;
   }
 }
@@ -91,7 +91,7 @@ function moveMyRacket() {
   }
 }
 
-function checkColisssionRacket(x, y) {
+function checkColissionRacket(x, y) {
   collided = collideRectCircle(
     x,
     y,
@@ -99,7 +99,7 @@ function checkColisssionRacket(x, y) {
     racketHeight,
     xpellet,
     ypellet,
-    ratio
+    radius
   );
   if (collided) {
     velocityXpellet *= -1;
