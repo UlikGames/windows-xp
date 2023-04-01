@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="display">0</div>
+      <button onclick="clean()">C</button>
+      <button onclick="getPercent()">%</button>
+      <button onclick="startCalculation('*')">x</button>
+      <button onclick="startCalculation('/')">/</button>
+      <button onclick="includeDigit('7')">7</button>
+      <button onclick="includeDigit('8')">8</button>
+      <button onclick="includeDigit('9')">9</button>
+      <button onclick="finalizeCalculation()">=</button>
+      <button onclick="includeDigit('4')">4</button>
+      <button onclick="includeDigit('5')">5</button>
+      <button onclick="includeDigit('6')">6</button>
+      <button onclick="startCalculation('-')">-</button>
+      <button onclick="includeDigit('1')">1</button>
+      <button onclick="includeDigit('2')">2</button>
+      <button onclick="includeDigit('3')">3</button>
+      <button onclick="startCalculation('+')" class="more">+</button>
+      <button class="zero" onclick="includeDigit('0')">0</button>
+      <button onclick="includePoint()">,</button>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>

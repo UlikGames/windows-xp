@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows XP</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        jQuery(window).load(function ($) {
+            updateClock();
+        });
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="desktop">
+        <!-- LINE 1 -->
+        <div class="cell-available td" id="1">
+            <div draggable="true" class="test" id="my-computer-id">
+                <a href="#my-computer" onclick="add_taskbar_element(1)">
+                    <img src="./img/My Computer.ico" alt="">
+                    <p>My computer</p>
+                </a>
+            </div>
+        </div>
+        <div class="cell-available td" id="2"></div>
+        <div class="cell-available td" id="3"></div>
+        <div class="cell-available td" id="4"></div>
+        <div class="cell-available td" id="5"></div>
+        <div class="cell-available td" id="6"></div>
+        <div class="cell-available td" id="7"></div>
+        <div class="cell-available td" id="8"></div>
+        <div class="cell-available td" id="9"></div>
+        <div class="cell-available td" id="10"></div>
+        <div class="cell-available td" id="11"></div>
+        <div class="cell-available td" id="12"></div>
+        <div class="cell-available td" id="13"></div>
+
+        <!-- LINE 2 -->
+        <div class="cell-available td" id="14">
+            <div draggable="true" id="calculator-id">
+                <a href="#calculator" onclick="add_taskbar_element(2)">
+                    <img src="./img/calc.ico" alt="">
+                    <p>Calculator</p>
+                </a>
+            </div>
+        </div>
+        <div class="cell-available td" id="15"></div>
+        <div class="cell-available td" id="16"></div>
+        <div class="cell-available td" id="17"></div>
+        <div class="cell-available td" id="18"></div>
+        <div class="cell-available td" id="19"></div>
+        <div class="cell-available td" id="20"></div>
+        <div class="cell-available td" id="21"></div>
+        <div class="cell-available td" id="22"></div>
+        <div class="cell-available td" id="23"></div>
+        <div class="cell-available td" id="24"></div>
+        <div class="cell-available td" id="25"></div>
+        <div class="cell-available td" id="26"></div>
+
+        <!-- LINE 3 -->
+        <div class="cell-available td" id="27">
+            <div draggable="true" id="cats-id">
+                <a href="#modal-images" id="link-api-cats" onclick="add_taskbar_element(3)">
+                    <img src="./img/JPG.png" alt="">
+                    <p>cat.jpg</p>
+                </a>
+            </div>
+        </div>
+        <div class="cell-available td" id="28"></div>
+        <div class="cell-available td" id="29"></div>
+        <div class="cell-available td" id="30"></div>
+        <div class="cell-available td" id="31"></div>
+        <div class="cell-available td" id="32"></div>
+        <div class="cell-available td" id="33"></div>
+        <div class="cell-available td" id="34"></div>
+        <div class="cell-available td" id="35"></div>
+        <div class="cell-available td" id="36"></div>
+        <div class="cell-available td" id="37"></div>
+        <div class="cell-available td" id="38"></div>
+        <div class="cell-available td" id="39"></div>
+
+        <!-- LINE 4 -->
+        <div class="cell-available td" id="40">
+            <div draggable="true" id="pong-id">
+                <a href="#pong" onclick="insert_pong(), add_taskbar_element(4)">
+                    <img src="./img/pong-logo.png" alt="">
+                    <p>Pong</p>
+                </a>
+            </div>
+        </div>
+        <div class="cell-available td" id="41"></div>
+        <div class="cell-available td" id="42"></div>
+        <div class="cell-available td" id="43"></div>
+        <div class="cell-available td" id="44"></div>
+        <div class="cell-available td" id="45"></div>
+        <div class="cell-available td" id="46"></div>
+        <div class="cell-available td" id="47"></div>
+        <div class="cell-available td" id="48"></div>
+        <div class="cell-available td" id="49"></div>
+        <div class="cell-available td" id="50"></div>
+        <div class="cell-available td" id="51"></div>
+        <div class="cell-available td" id="52"></div>
+
+        <!-- LINE 5  -->
+        <div class="cell-available td" id="53">
+            <div draggable="true" id="chrome-id">
+                <a href="#chrome" onclick="add_taskbar_element(5)">
+                    <img src="./img/Google_Chrome_icon.png" alt="">
+                    <p>Chrome</p>
+                </a>
+            </div>
+        </div>
+        <div class="cell-available td" id="54"></div>
+        <div class="cell-available td" id="55"></div>
+        <div class="cell-available td" id="56"></div>
+        <div class="cell-available td" id="57"></div>
+        <div class="cell-available td" id="58"></div>
+        <div class="cell-available td" id="59"></div>
+        <div class="cell-available td" id="60"></div>
+        <div class="cell-available td" id="61"></div>
+        <div class="cell-available td" id="62"></div>
+        <div class="cell-available td" id="63"></div>
+        <div class="cell-available td" id="64"></div>
+        <div class="cell-available td" id="65"></div>
+
+        <!-- LINE 6 -->
+        <div class="cell-available td" id="66">
+            <div draggable="true" id="paint-id">
+                <a href="#paint" onclick="add_taskbar_element(6)">
+                    <img src="./img/Paint.png" alt="">
+                    <p>Paint</p>
+                </a>
+            </div>
+        </div>
+        <div class="cell-available td" id="67"></div>
+        <div class="cell-available td" id="68"></div>
+        <div class="cell-available td" id="69"></div>
+        <div class="cell-available td" id="70"></div>
+        <div class="cell-available td" id="71"></div>
+        <div class="cell-available td" id="72"></div>
+        <div class="cell-available td" id="73"></div>
+        <div class="cell-available td" id="74"></div>
+        <div class="cell-available td" id="75"></div>
+        <div class="cell-available td" id="76"></div>
+        <div class="cell-available td" id="77"></div>
+        <div class="cell-available td" id="78"></div>
+    </div>
+
+    <div id="taskbar">
+        <a href="#menu" onclick="insert_start_menu()" id="menu-start-id">
+            <div id="start-menu"><img width="100" id="start-menu-start" src="./img/menu1.png" alt=""></div>
+        </a>
+        <div id="sidebar">
+            <a href="#"><img id="icon-sound" src="./img/Volume.png" alt=""></a>
+            <a href=""><output id="hour"></output></a>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <!-- MODAL - FOLDER: MY COMPUTER -->
+    <div id="my-computer" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img src="./img/Monitor.ico" alt="">
+                <h4 style="font-size: var(--16px);" ;>My computer</h4>
+            </div>
+            <div class="header-buttons">
+                <a href="#"><img src="./img/button-minimize.png" alt=""></a>
+                <a href="#"><img src="./img/button-maximize.png" alt=""></a>
+                <a href="#close" title="close" class="close" onclick="remove_taskbar_element()"><img src="./img/button-close.png" alt=""></a>
+            </div>
+        </div>
+        <ul style="display: flex; gap: 5px; background-color: #F1EFE1; border-bottom: 2px solid #DEDED2;font-size: var(--16px); height: 4.1vh;">
+            <li><ins>F</ins>ile</li>
+            <li><ins>E</ins>dit</li>
+            <li><ins>V</ins>iew</li>
+            <li>F<ins>a</ins>vorites</li>
+            <li><ins>T</ins>ools</li>
+            <li><ins>H</ins>elp</li>
+            <img style="background-color: #ffffff; padding: 0 10px; margin-left: auto;" class="image-media" src="./img/logo windows.png" alt="">
+        </ul>
+        <div>
+            <ul id="navigation">
+                <li><img class="image-media" src="./img/Back.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="./img/down-arrow.svg" alt="">
+                <li><img class="image-media" src="./img/Forward.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="./img/down-arrow.svg" alt="">
+                <li><img class="image-media" src="./img/Up.png" alt=""></li>
+                <li><img class="image-media" src="./img/research.ico" alt=""></li>
+                <li><img class="image-media" src="./img/open-folders.png" alt=""></li>
+                <li><img class="image-media" src="./img/Icon View.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="./img/down-arrow.svg" alt="">
+            </ul>
+            <div id="my-pc-address">
+                <h4 style="font-size: var(--16px);font-weight: normal;">A<ins>d</ins>dress</h4>
+                <div id="link-address">
+                    <p>My computer</p>
+                    <img src="./img/down-arrow.svg" alt="">
+                </div>
+                <div id="link-go">
+                    <p>Go</p>
+                </div>
+            </div>
+            <div id="my-pc-grid">
+                <section id="my-pc-grid-1">
+                    <ul class="shortcuts-sections">
+                        <li class="header-shortcuts">
+                            <h2>System Tasks</h2>
+                            <img width="20" src="./img/double-arrows.svg" alt="">
+                        </li>
+
+                        <li class="shortcuts-folders">
+                            <img class="mini-pictures" src="./img/253.ico" alt="">
+                            <p>Veiw system information</p>
+                        </li>
+                        <li class="shortcuts-folders">
+                            <img class="mini-pictures" src="./img/Programs.png" alt="">
+                            <p>Add or remove programs</p>
+                        </li>
+                        <li class="shortcuts-folders">
+                            <img class="mini-pictures" src="./img/control Panel.ico" alt="">
+                            <p>Change a setting</p>
+                        </li>
+                    </ul>
+                    <ul class="shortcuts-sections">
+                        <li class="header-shortcuts">
+                            <h2>Other Places</h2>
+                            <img width="20" src="./img/double-arrows.svg" alt="">
+                        </li>
+                        <li class="shortcuts-folders">
+                            <img class="mini-pictures" src="./img/network-places.ico" alt="">
+                            <p>My Network Places</p>
+                        </li>
+                        <li class="shortcuts-folders">
+                            <img class="mini-pictures" src="./img/my Documents.ico" alt="">
+                            <p>My Documents</p>
+                        </li>
+                        <li class="shortcuts-folders">
+                            <img class="mini-pictures" src="./img/Folder Closed.ico" alt="">
+                            <p>Sahred Documents</p>
+                        </li>
+                        <li class="shortcuts-folders">
+                            <img class="mini-pictures" src="./img/control Panel.ico" alt="">
+                            <p>Control Panel</p>
+                        </li>
+                    </ul>
+                    <ul class="shortcuts-sections">
+                        <li class="header-shortcuts">
+                            <h2>Details</h2>
+                            <img class="" width="20" src="./img/double-arrows.svg" alt="">
+                        </li>
+                        <li>
+                            <h2>My Computer</h2>
+                            <p>System Folder</p>
+                        </li>
+                    </ul>
+                </section>
+                <section id="my-pc-grid-2">
+                    <h2 class="topics-header">Files Stored on This Computer</h2>
+                    <div class="my-pc-topics">
+                        <div class="my-pc-items">
+                            <img class="big-image" src="./img/Folder Closed.ico" alt="">
+                            <p>Shared Documents</p>
+                        </div>
+                        <div class="my-pc-items">
+                            <img class="big-image" src="./img/Folder Closed.ico" alt="">
+                            <p>UlikGames's Documents</p>
+                        </div>
+                    </div>
+                    <h2 class="topics-header">Hard Disk Drives</h2>
+                    <div class="my-pc-topics">
+                        <div class="my-pc-items">
+                            <img class="big-image" src="./img/9.ico" alt="">
+                            <p>Local Disk (C:)</p>
+                        </div>
+                        <div class="my-pc-items">
+                            <img class="big-image" src="./img/9.ico" alt="">
+                            <p>Local Disk (E:)</p>
+                        </div>
+                    </div>
+                    <h2 class="topics-header">Devices with Removable Storage</h2>
+                    <div class="my-pc-topics">
+                        <div class="my-pc-items">
+                            <img class="big-image" src="./img/7.ico" alt="">
+                            <p>3½ Floppy (A:)</p>
+                        </div>
+                        <div class="my-pc-items">
+                            <img class="big-image" src="./img/12.ico" alt="">
+                            <p>DVD-RAM Drive (D:)</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL - API CATS -->
+    <div id="modal-images" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img src="./img/JPG.png" alt="">
+                <h4>cat.jpg - Image Viewer</h4>
+            </div>
+            <div class="header-buttons">
+                <a href="#">
+                    <img src="./img/button-minimize.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/button-maximize.png" alt="">
+                </a>
+                <a href="#close" title="close" class="close" id="close-button-image-cat" onclick="remove_taskbar_element()">
+                    <img src="./img/button-close.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="cat-img">
+            <img src="" alt="" id="images-api-cat">
+        </div>
+    </div>
+
+    <!-- MODAL - JOGO: PONG -->
+    <div id="pong" class="modal">
+        <div class="modal-header pong-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img id="pong-logo" src="./img/pong-logo.png" alt="">
+                <h4>Pong</h4>
+            </div>
+            <div class="header-buttons">
+                <a href="/">
+                    <img src="./img/button-minimize.png" alt="">
+                </a>
+                <a>
+                    <img src="./img/button-maximize-disabled.png" alt="">
+                </a>
+                <a href="#close" title="close" class="close" onclick="withdraw_pong(), remove_taskbar_element()">
+                    <img src="./img/button-close.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL - PAINT -->
+    <div id="paint" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img id="paint-logo" src="./img/Paint.png" alt="">
+                <h4>untitled - Paint</h4>
+            </div>
+            <div class="header-buttons">
+                <a href="#"><img src="./img/button-minimize.png" alt=""></a>
+                <a><img src="./img/button-maximize-disabled.png" alt=""></a>
+                <a href="#close" title="close" class="close" onclick="remove_taskbar_element()"><img src="./img/button-close.png" alt=""></a>
+            </div>
+        </div>
+        <iframe src="paint/index.html" width="685" height="428"></iframe>
+    </div>
+
+    <!-- MODAL - CHROME -->
+    <div id="chrome" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img src="./img/Google_Chrome_icon.png" alt="">
+                <h4>Google Chrome</h4>
+            </div>
+            <div class="header-buttons">
+                <a href="#">
+                    <img src="./img/button-minimize.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/button-maximize.png" alt="">
+                </a>
+                <a href="#close" title="close" class="close" onclick="remove_taskbar_element()">
+                    <img src="./img/button-close.png" alt="">
+                </a>
+            </div>
+        </div>
+        <iframe src="https://www.bing.com/?cc=en" width="1280" height="768"></iframe>
+    </div>
+
+    <!-- MODAL - calculator -->
+    <!-- TEMPLATE MODAL -->
+    <div id="calculator" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img id="calculator-icon" src="./img/calc.ico" alt="">
+                <h4>Calculator</h4>
+            </div>
+            <div class="header-buttons">
+                <a href="#">
+                    <img src="./img/button-minimize.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/button-maximize-disabled.png" alt="">
+                </a>
+                <a href="#close" title="close" class="close" onclick="remove_taskbar_element()">
+                    <img src="./img/button-close.png" alt="">
+                </a>
+            </div>
+        </div>
+        <iframe src="./calculator/index.html" width="240" height="316"></iframe>
+    </div>
+
+    <script>
+
+        const elements = document.querySelectorAll("[draggable='true']");
+        const available_cells = document.querySelectorAll(".cell-available");
+
+        elements.forEach((element) => {
+            element.addEventListener("dragstart", start_drag);
+        })
+        available_cells.forEach((cell) => {
+            cell.addEventListener("dragover", entered_release);
+        })
+        available_cells.forEach((cell) => {
+            cell.addEventListener("dragleave", exit_release);
+        })
+        available_cells.forEach((cell) => {
+            cell.addEventListener("dragend", released_element);
+        })
+        function released_element() {
+            this.classList.remove("cell-available");
+            this.classList.add("cell-");
+            this.children[0].classList.remove("dragging");
+            localStorage.setItem(this.children[0].id, this.id); //to save desktop config
+            // console.log(this.id);
+            // console.log(localStorage.getItem("calculator-id"));
+            // console.log(this.children[0].id);
+
+            //alert(this.children[0].className);
+        }
+        function exit_release() {
+            this.classList.add("cell-available");
+            this.classList.remove("cell-");
+            //let name = document.getElementById("myLI").parentNode.nodeName;
+            this.classList.remove("dragged");
+        }
+        function entered_release() {
+
+            if (this.children[0] == undefined) {
+                this.classList.add("dragged");
+
+                const element_dragged = document.querySelector(".dragging");
+
+                this.appendChild(element_dragged);
+            }
+        }
+        function start_drag() {
+            this.classList.add("dragging");
+        }
+        function updateClock() {
+            var current_moment = new Date();
+
+            var vhour = current_moment.getHours();
+            var vminuto = current_moment.getMinutes();
+
+            if (vhour < 10) { vhour = "0" + vhour; }
+            if (vminuto < 10) { vminuto = "0" + vminuto; }
+
+            hourFormat = vhour + ":" + vminuto;
+
+            document.getElementById("hour").innerHTML = hourFormat;
+
+            setTimeout("updateClock()", 60000);
+        }
+        function insert_pong() {
+            const iframe = document.createElement("iframe");
+            iframe.src = "jogo-Pong/index.html";
+            iframe.width = "600";
+            iframe.height = "400";
+            iframe.id = "iframe-pong";
+            document.getElementById("pong").appendChild(iframe);
+        }
+        function withdraw_pong() {
+            const iframe_pong = document.getElementById("iframe-pong");
+            iframe_pong.parentNode.removeChild(iframe_pong);
+        }
+        function insert_start_menu() {
+            const body = document.body;
+            body.innerHTML += (`<div id="menu" class="modal" onblur="remove_start_menu()">
+        <div id="menu-header">
+            <div id="user">
+                <img width="40" id="user-profil" src="img/duck 1.png" alt="">
+                <h3 id="user-name">UlikGames</h3>
+            </div>
+        </div>
+        <div class="program-list">
+            <ul id="menu-side-1">
+                <li class="menu-item" href="#chrome">
+                    <img width="40" class="menu-item-img" src="img/Google_Chrome_icon.png" alt="">
+                    <div>
+                        <h6>Internet</h6>
+                        <h6 class="text-500 gray-text">Google Chrome</h6>
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Outlook-Express-Icone.png" alt="">
+                    <div>
+                        <h6>Email</h6>
+                        <h6 class="text-500 gray-text">Outlook Express</h6>
+                    </div>
+                </li>
+                <span></span>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Microsoft-Excel.png" alt="">
+                    <h6 class="text-500">Microsoft Office Excel 2003</h6>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Notepad.png" alt="">
+                    <h6 class="text-500">Notepad</h6>
+                </li>
+                <li class="menu-item" href="#paint">
+                    <img width="40" class="menu-item-img" src="img/Paint.png" alt="">
+                    <h6 class="text-500">Paint</h6>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Windows Media Player 10.png" alt="">
+                    <h6 class="text-500">Windows Media Player</h6>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Microsoft-Word.png" alt="">
+                    <h6 class="text-500">Microsoft Office Word 2003</h6>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/msn.png" alt="">
+                    <h6 class="text-500">Windows Live Messenger</h6>
+                </li>
+                <span></span>
+                <li id="all-programs" class="menu-item">
+                    <h6>All Programs</h6>
+                    <img width="40" class="menu-item-img" src="img/246.ico" alt="">
+                </li>
+            </ul>
+            <ul id="menu-side-2">
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/my Documents.ico" alt="">
+                    <h6>My Documents</h6>
+                </li>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/recent-documents.ico" alt="">
+                    <h6>Recent Documents</h6>
+                </li>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/my images.ico" alt="">
+                    <h6>My Pictures</h6>
+                </li>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/my songs.ico" alt="">
+                    <h6>My Music</h6>
+                </li>
+                <li class="menu-item text-blue" href="#my-computer">
+                    <img width="40" class="menu-item-img" src="img/my-computer.ico" alt="">
+                    <h6>My Computer</h6>
+                </li>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/network-places.ico" alt="">
+                    <h6>My Network Places</h6>
+                </li>
+                <span></span>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/control Panel.ico" alt="">
+                    <h6 class="text-500">Control Panel</h6>
+                </li>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/Default Programs.png" alt="">
+                    <h6 class="text-500">Set Program Access and Default</h6>
+                </li>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/printer-fax.ico" alt="">
+                    <h6 class="text-500">Printers and Faxes</h6>
+                </li>
+                <span></span>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/help-and-support.ico" alt="">
+                    <h6 class="text-500">Help and Support</h6>
+                </li>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/research.ico" alt="">
+                    <h6 class="text-500">Search</h6>
+                </li>
+                <li class="menu-item text-blue">
+                    <img width="40" class="menu-item-img" src="img/execute.ico" alt="">
+                    <h6 class="text-500">Run...</h6>
+                </li>
+            </ul>
+        </div>
+        <div id="menu-footer">
+            <div class="span"></div>
+            <a href="#menu">
+                <img width="40" src="img/Logout.png" alt="">
+                <p>Log Off</p>
+            </a>
+            <a href="#menu">
+                <img width="40" src="img/Power.png" alt="">
+                <p>Turn Off Computer</p>
+            </a>
+        </div>
+    </div>`);
+            const menu = document.getElementById("desktop");
+            menu.addEventListener("click", () => {
+                const menu_iniciar = document.getElementById("menu");
+                menu_iniciar.remove(menu_iniciar);
+                console.log("OPA");
+                window.location.href = "#"; 
+            })
+        }
+        function add_taskbar_element(num) {
+            const button = document.getElementById("menu-start-id");
+            const box_bar = document.createElement("div");
+            box_bar.id = "element-taskbar";
+            box_bar.classList.add("bar-box"); //div added next to the start button, already added with the "box-bar" class
+
+
+            if (num == 1) { //variable "num" comes as a parameter, in the links of the programs it calls this function passing a number as a parameter, each one passes a different number, then according to the number we know which program opened, then we can know if it puts the paint icon , pong, etc.
+                box_bar.innerHTML += `<img src="./img/monitor.ico"><p>My Computer</p>`
+            } else if (num == 2) {
+                box_bar.innerHTML += `<img src="./img/calc.ico"><p>Calculator</p>`
+            } else if (num == 3) {
+                box_bar.innerHTML += `<img src="./img/JPG.png"><p>Image Viewer</p>`
+            } else if (num == 4) {
+                box_bar.innerHTML += `<img src="./img/pong-logo.png"><p>Pong</p>`
+            } else if (num == 5) {
+                box_bar.innerHTML += `<img src="./img/Google_Chrome_icon.png"><p>Chrome</p>`;
+            } else if (num == 6) {
+                box_bar.innerHTML += `<img src="./img/Paint.png"><p>Paint</p>`;
+            }
+
+            button.after(box_bar); //this method inserts the box after the START button on the taskbar
+        }
+        function remove_taskbar_element() {
+            const element_task_bar = document.getElementById("element-taskbar");
+            element_task_bar.remove(element_task_bar);
+        }
+
+        //to load the desktop in the state it was in previously
+        window.onload = () => {
+            if (localStorage.length == 0) {
+                //initialize icon location
+                localStorage.setItem("my-computer-id", 1);
+                localStorage.setItem("calculator-id", 14);
+                localStorage.setItem("cats-id", 27);
+                localStorage.setItem("pong-id", 40);
+                localStorage.setItem("chrome-id", 53);
+                localStorage.setItem("paint-id", 66);
+            }
+            Object.keys(localStorage).forEach((key) => {
+                const element_desktop = document.getElementById(`${key}`);
+                console.log(element_desktop);
+                const div_element = element_desktop.parentNode;
+                div_element.removeChild(element_desktop);
+                const nova_div_element = document.getElementById(`${localStorage.getItem(key)}`);
+                nova_div_element.appendChild(element_desktop);
+            })
+        }   
+    </script>
+    <script src="api-cats.js"></script>
+</body>
+
+</html>
