@@ -79,7 +79,7 @@ function checkColissionBoard() {
 }
 
 function showRacket(x, y) {
-  rect(x, y, rackeLlength, racketHeight);
+  rect(x, y, racketlength, racketHeight);
 }
 
 function moveMyRacket() {
@@ -95,7 +95,7 @@ function checkColissionRacket(x, y) {
   collided = collideRectCircle(
     x,
     y,
-    rackeLlength,
+    racketlength,
     racketHeight,
     xpellet,
     ypellet,
