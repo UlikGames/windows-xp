@@ -9,9 +9,9 @@
 </h3>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/viniporto/clone-windows-xp?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/UlikGames/windows-xp?color=%2304D361">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/ulikgames/windows-xp">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/UlikGames/windows-xp">
 
   <a href="https://www.instagram.com/ulvin_necefov/">
     <img alt="Ulvin Najafov" src="https://img.shields.io/badge/Made%20by-UlikGames-%237519C1">
